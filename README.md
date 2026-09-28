@@ -136,6 +136,8 @@ sudo snort -T -c /etc/snort/snort.lua -i eth0
 The configuration successfully validated with:
 Snort successfully validated the configuration (with 0 warnings).
 The custom local rules were also successfully loaded.
+<img width="1920" height="909" alt="Screenshot_2026-09-28_18_33_01" src="https://github.com/user-attachments/assets/f206d2c8-e3f5-459e-b198-a826d5ad8efd" />
+
 🧪 ICMP Detection Test
 A controlled ICMP test was performed against the Metasploitable 2 VM:
 ping -c 4 10.230.14.145
@@ -144,6 +146,8 @@ sudo tcpdump -ni eth0 'host 10.230.14.145' \
 -w ~/snort-lab-icmp.pcap
 The resulting PCAP was:
 ~/snort-lab-icmp.pcap
+<img width="1920" height="909" alt="Screenshot_2026-09-28_18_33_15" src="https://github.com/user-attachments/assets/c52c702c-96b1-40b5-ba8f-b5084988e863" />
+
 📡 Packet Capture
 The capture contained ICMP traffic between:
 Source:      10.230.14.136
@@ -152,6 +156,7 @@ Protocol:    ICMP
 Example capture:
 10.230.14.136 → 10.230.14.145
 ICMP Echo Request
+<img width="1920" height="909" alt="Screenshot_2026-09-28_18_36_01" src="https://github.com/user-attachments/assets/0f802730-30bf-4f68-9cf3-a5e8e544eea5" />
 
 10.230.14.145 → 10.230.14.136
 ICMP Echo Reply
@@ -166,6 +171,8 @@ The source IP was 10.230.14.136.
 The destination IP was 10.230.14.145.
 No packet loss was observed during the test.
 The traffic corresponded to the controlled lab activity.
+<img width="1920" height="909" alt="Screenshot_2026-09-28_18_32_18" src="https://github.com/user-attachments/assets/406ba709-8624-450f-ac91-1ea00f182933" />
+
 🚨 Snort Rule Testing
 The local rule was tested directly against the captured PCAP.
 Command:
@@ -289,13 +296,18 @@ Wireshark
 PCAP
 to investigate the same network event.
 📸 Evidence
-Recommended screenshots for this project:
 1. Network Configuration
 ip -br addr
+<img width="1920" height="909" alt="Screenshot_2026-09-28_18_51_13" src="https://github.com/user-attachments/assets/ae661bf8-a988-421c-b619-2ce0926a7933" />
+
 2. Snort Configuration Validation
 sudo snort -T -c /etc/snort/snort.lua -i eth0
+<img width="1920" height="909" alt="Screenshot_2026-09-28_18_33_01" src="https://github.com/user-attachments/assets/e2e70f7b-3a21-42bc-a45f-2f3f95600d7f" />
+
 3. Local Rules
 cat /etc/snort/rules/local.rules
+<img width="1920" height="909" alt="Screenshot_2026-09-28_18_36_01" src="https://github.com/user-attachments/assets/e343b7ff-ffa3-44b4-951f-b88e26361cfd" />
+
 4. ICMP Traffic
 ping -c 4 10.230.14.145
 5. tcpdump Capture
