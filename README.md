@@ -1,4 +1,3 @@
-# Snort-3-Network-Intrusion-Detection-Lab
 # Snort 3 Network Intrusion Detection Lab
 
 A hands-on cybersecurity lab demonstrating how to deploy and configure **Snort 3** as a Network Intrusion Detection System (NIDS), generate controlled network traffic against a **Metasploitable 2** virtual machine, create custom detection rules, and investigate captured traffic using **Wireshark**.
