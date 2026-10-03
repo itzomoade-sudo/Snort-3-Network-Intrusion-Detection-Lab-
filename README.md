@@ -32,7 +32,7 @@ Network Traffic
        ↓
 Determine:
 True Positive / False Positive
-
+```
 
 The lab uses Kali Linux as the monitoring system and Metasploitable 2 as the intentionally vulnerable lab target.
 🎯 Objectives
